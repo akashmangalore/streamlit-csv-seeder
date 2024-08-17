@@ -237,6 +237,24 @@
         "documentation": {}
     },
     {
+        "label": "PRIMARY_COLOR",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "PRIMARY_COLOR = \"#FF4B4B\"\n# Title HTML content for the centered title with primary color for \"Seeder\"\ntitle_html_content = f\"\"\"\n<div style=\"text-align: center;\">\n    <h1>CSV <span style=\"color:{PRIMARY_COLOR};\">Seeder</span></h1>\n</div>\n\"\"\"\nSTATUS_OPTION_LIST = [\"Pending\", \"In-Review\", \"Approved\", \"Rejected\", \"Completed\"]\nclass Status(BaseProvider):\n\tdef status(self) -> str:",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "title_html_content",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "title_html_content = f\"\"\"\n<div style=\"text-align: center;\">\n    <h1>CSV <span style=\"color:{PRIMARY_COLOR};\">Seeder</span></h1>\n</div>\n\"\"\"\nSTATUS_OPTION_LIST = [\"Pending\", \"In-Review\", \"Approved\", \"Rejected\", \"Completed\"]\nclass Status(BaseProvider):\n\tdef status(self) -> str:\n\t\treturn self.random.choice(STATUS_OPTION_LIST)\nDEFUALT_METHOD_NAME = \"word\"",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
         "label": "STATUS_OPTION_LIST",
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
@@ -457,7 +475,7 @@
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\t\tmethod = method_name_method_dict.get(method_name, DEFUALT_METHOD_NAME)\n\t\t\trecord[headers[index]] = method()\n\t\trecords.append(record)\n\tdf = pd.DataFrame(records)\n\treturn df\n\t# csv_path = f\"temp/{no_of_records} Records of {filename} ({locale}).csv\"\n\t# df.to_csv(csv_path, index=False, encoding=\"utf-8\")\n\t# return df, csv_path\nuploaded_csv_file = st.file_uploader(\"Choose a CSV File\", type=[\"csv\"])\nif uploaded_csv_file is not None:",
+        "peekOfCode": "\t\t\tmethod = method_name_method_dict.get(method_name, DEFUALT_METHOD_NAME)\n\t\t\trecord[headers[index]] = method()\n\t\trecords.append(record)\n\tdf = pd.DataFrame(records)\n\treturn df\n\t# csv_path = f\"temp/{no_of_records} Records of {filename} ({locale}).csv\"\n\t# df.to_csv(csv_path, index=False, encoding=\"utf-8\")\n\t# return df, csv_path\nif __name__ == \"__main__\":\n\t# Code Start",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
@@ -466,7 +484,7 @@
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\t\trecord[headers[index]] = method()\n\t\trecords.append(record)\n\tdf = pd.DataFrame(records)\n\treturn df\n\t# csv_path = f\"temp/{no_of_records} Records of {filename} ({locale}).csv\"\n\t# df.to_csv(csv_path, index=False, encoding=\"utf-8\")\n\t# return df, csv_path\nuploaded_csv_file = st.file_uploader(\"Choose a CSV File\", type=[\"csv\"])\nif uploaded_csv_file is not None:\n\twith st.form(\"process_csv_upload\"):",
+        "peekOfCode": "\t\t\trecord[headers[index]] = method()\n\t\trecords.append(record)\n\tdf = pd.DataFrame(records)\n\treturn df\n\t# csv_path = f\"temp/{no_of_records} Records of {filename} ({locale}).csv\"\n\t# df.to_csv(csv_path, index=False, encoding=\"utf-8\")\n\t# return df, csv_path\nif __name__ == \"__main__\":\n\t# Code Start\n\t# Display the Title HTML content",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
@@ -475,160 +493,160 @@
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\tdf = pd.DataFrame(records)\n\treturn df\n\t# csv_path = f\"temp/{no_of_records} Records of {filename} ({locale}).csv\"\n\t# df.to_csv(csv_path, index=False, encoding=\"utf-8\")\n\t# return df, csv_path\nuploaded_csv_file = st.file_uploader(\"Choose a CSV File\", type=[\"csv\"])\nif uploaded_csv_file is not None:\n\twith st.form(\"process_csv_upload\"):\n\t\tgenerate_mimesis_method_dict_for_locale(Locale.EN)\n\t\theaders = get_csv_headers(uploaded_csv_file)",
+        "peekOfCode": "\tdf = pd.DataFrame(records)\n\treturn df\n\t# csv_path = f\"temp/{no_of_records} Records of {filename} ({locale}).csv\"\n\t# df.to_csv(csv_path, index=False, encoding=\"utf-8\")\n\t# return df, csv_path\nif __name__ == \"__main__\":\n\t# Code Start\n\t# Display the Title HTML content\n\tst.markdown(title_html_content, unsafe_allow_html=True)\n\tuploaded_csv_file = st.file_uploader(\"Choose a CSV File\", type=[\"csv\"])",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
     {
-        "label": "uploaded_csv_file",
+        "label": "\tuploaded_csv_file",
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "uploaded_csv_file = st.file_uploader(\"Choose a CSV File\", type=[\"csv\"])\nif uploaded_csv_file is not None:\n\twith st.form(\"process_csv_upload\"):\n\t\tgenerate_mimesis_method_dict_for_locale(Locale.EN)\n\t\theaders = get_csv_headers(uploaded_csv_file)\n\t\tfilename_with_extension = os.path.basename(uploaded_csv_file.name)\n\t\tst.markdown(\n\t\t\t'<h3>Select <b style=\"color:#FF4B4B;\">Seed Type</b> for each of the Headers</h3>',\n\t\t\tunsafe_allow_html=True,\n\t\t)",
+        "peekOfCode": "\tuploaded_csv_file = st.file_uploader(\"Choose a CSV File\", type=[\"csv\"])\n\tif uploaded_csv_file is not None:\n\t\twith st.form(\"process_csv_upload\"):\n\t\t\tgenerate_mimesis_method_dict_for_locale(Locale.EN)\n\t\t\theaders = get_csv_headers(uploaded_csv_file)\n\t\t\tfilename_with_extension = os.path.basename(uploaded_csv_file.name)\n\t\t\tst.markdown(\n\t\t\t\tf\"<h3>Select <b style='color:{PRIMARY_COLOR};'>Seed Type</b> for each of the Headers</h3>\",\n\t\t\t\tunsafe_allow_html=True,\n\t\t\t)",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
     {
-        "label": "\t\theaders",
+        "label": "\t\t\theaders",
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\theaders = get_csv_headers(uploaded_csv_file)\n\t\tfilename_with_extension = os.path.basename(uploaded_csv_file.name)\n\t\tst.markdown(\n\t\t\t'<h3>Select <b style=\"color:#FF4B4B;\">Seed Type</b> for each of the Headers</h3>',\n\t\t\tunsafe_allow_html=True,\n\t\t)\n\t\t# st.subheader(\"Select _Type_ of each Headers\")\n\t\tdropdown_options = method_name_list\n\t\theader_selection_list = []\n\t\tcolumn_count = 4",
+        "peekOfCode": "\t\t\theaders = get_csv_headers(uploaded_csv_file)\n\t\t\tfilename_with_extension = os.path.basename(uploaded_csv_file.name)\n\t\t\tst.markdown(\n\t\t\t\tf\"<h3>Select <b style='color:{PRIMARY_COLOR};'>Seed Type</b> for each of the Headers</h3>\",\n\t\t\t\tunsafe_allow_html=True,\n\t\t\t)\n\t\t\t# st.subheader(\"Select _Type_ of each Headers\")\n\t\t\tdropdown_options = method_name_list\n\t\t\theader_selection_list = []\n\t\t\tcolumn_count = 4",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
     {
-        "label": "\t\tfilename_with_extension",
+        "label": "\t\t\tfilename_with_extension",
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\tfilename_with_extension = os.path.basename(uploaded_csv_file.name)\n\t\tst.markdown(\n\t\t\t'<h3>Select <b style=\"color:#FF4B4B;\">Seed Type</b> for each of the Headers</h3>',\n\t\t\tunsafe_allow_html=True,\n\t\t)\n\t\t# st.subheader(\"Select _Type_ of each Headers\")\n\t\tdropdown_options = method_name_list\n\t\theader_selection_list = []\n\t\tcolumn_count = 4\n\t\tcolums = st.columns(column_count)",
+        "peekOfCode": "\t\t\tfilename_with_extension = os.path.basename(uploaded_csv_file.name)\n\t\t\tst.markdown(\n\t\t\t\tf\"<h3>Select <b style='color:{PRIMARY_COLOR};'>Seed Type</b> for each of the Headers</h3>\",\n\t\t\t\tunsafe_allow_html=True,\n\t\t\t)\n\t\t\t# st.subheader(\"Select _Type_ of each Headers\")\n\t\t\tdropdown_options = method_name_list\n\t\t\theader_selection_list = []\n\t\t\tcolumn_count = 4\n\t\t\tcolums = st.columns(column_count)",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
     {
-        "label": "\t\tdropdown_options",
+        "label": "\t\t\tdropdown_options",
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\tdropdown_options = method_name_list\n\t\theader_selection_list = []\n\t\tcolumn_count = 4\n\t\tcolums = st.columns(column_count)\n\t\tfor index, header in enumerate(headers):\n\t\t\tlower_header = snake_case(header)\n\t\t\tdefault_value = get_method_name_for_header(lower_header)\n\t\t\toptions = [*dropdown_options]\n\t\t\toptions.remove(default_value)\n\t\t\twith colums[index % column_count]:",
+        "peekOfCode": "\t\t\tdropdown_options = method_name_list\n\t\t\theader_selection_list = []\n\t\t\tcolumn_count = 4\n\t\t\tcolums = st.columns(column_count)\n\t\t\tfor index, header in enumerate(headers):\n\t\t\t\tlower_header = snake_case(header)\n\t\t\t\tdefault_value = get_method_name_for_header(lower_header)\n\t\t\t\toptions = [*dropdown_options]\n\t\t\t\toptions.remove(default_value)\n\t\t\t\twith colums[index % column_count]:",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
     {
-        "label": "\t\theader_selection_list",
+        "label": "\t\t\theader_selection_list",
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\theader_selection_list = []\n\t\tcolumn_count = 4\n\t\tcolums = st.columns(column_count)\n\t\tfor index, header in enumerate(headers):\n\t\t\tlower_header = snake_case(header)\n\t\t\tdefault_value = get_method_name_for_header(lower_header)\n\t\t\toptions = [*dropdown_options]\n\t\t\toptions.remove(default_value)\n\t\t\twith colums[index % column_count]:\n\t\t\t\tselectbox = st.selectbox(",
+        "peekOfCode": "\t\t\theader_selection_list = []\n\t\t\tcolumn_count = 4\n\t\t\tcolums = st.columns(column_count)\n\t\t\tfor index, header in enumerate(headers):\n\t\t\t\tlower_header = snake_case(header)\n\t\t\t\tdefault_value = get_method_name_for_header(lower_header)\n\t\t\t\toptions = [*dropdown_options]\n\t\t\t\toptions.remove(default_value)\n\t\t\t\twith colums[index % column_count]:\n\t\t\t\t\tselectbox = st.selectbox(",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
     {
-        "label": "\t\tcolumn_count",
+        "label": "\t\t\tcolumn_count",
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\tcolumn_count = 4\n\t\tcolums = st.columns(column_count)\n\t\tfor index, header in enumerate(headers):\n\t\t\tlower_header = snake_case(header)\n\t\t\tdefault_value = get_method_name_for_header(lower_header)\n\t\t\toptions = [*dropdown_options]\n\t\t\toptions.remove(default_value)\n\t\t\twith colums[index % column_count]:\n\t\t\t\tselectbox = st.selectbox(\n\t\t\t\t\tlabel=header,",
+        "peekOfCode": "\t\t\tcolumn_count = 4\n\t\t\tcolums = st.columns(column_count)\n\t\t\tfor index, header in enumerate(headers):\n\t\t\t\tlower_header = snake_case(header)\n\t\t\t\tdefault_value = get_method_name_for_header(lower_header)\n\t\t\t\toptions = [*dropdown_options]\n\t\t\t\toptions.remove(default_value)\n\t\t\t\twith colums[index % column_count]:\n\t\t\t\t\tselectbox = st.selectbox(\n\t\t\t\t\t\tlabel=header,",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
     {
-        "label": "\t\tcolums",
+        "label": "\t\t\tcolums",
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\tcolums = st.columns(column_count)\n\t\tfor index, header in enumerate(headers):\n\t\t\tlower_header = snake_case(header)\n\t\t\tdefault_value = get_method_name_for_header(lower_header)\n\t\t\toptions = [*dropdown_options]\n\t\t\toptions.remove(default_value)\n\t\t\twith colums[index % column_count]:\n\t\t\t\tselectbox = st.selectbox(\n\t\t\t\t\tlabel=header,\n\t\t\t\t\tplaceholder=default_value,",
+        "peekOfCode": "\t\t\tcolums = st.columns(column_count)\n\t\t\tfor index, header in enumerate(headers):\n\t\t\t\tlower_header = snake_case(header)\n\t\t\t\tdefault_value = get_method_name_for_header(lower_header)\n\t\t\t\toptions = [*dropdown_options]\n\t\t\t\toptions.remove(default_value)\n\t\t\t\twith colums[index % column_count]:\n\t\t\t\t\tselectbox = st.selectbox(\n\t\t\t\t\t\tlabel=header,\n\t\t\t\t\t\tplaceholder=default_value,",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
     {
-        "label": "\t\t\tlower_header",
+        "label": "\t\t\t\tlower_header",
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\t\tlower_header = snake_case(header)\n\t\t\tdefault_value = get_method_name_for_header(lower_header)\n\t\t\toptions = [*dropdown_options]\n\t\t\toptions.remove(default_value)\n\t\t\twith colums[index % column_count]:\n\t\t\t\tselectbox = st.selectbox(\n\t\t\t\t\tlabel=header,\n\t\t\t\t\tplaceholder=default_value,\n\t\t\t\t\toptions=[default_value, *options],\n\t\t\t\t\tkey=lower_header,",
+        "peekOfCode": "\t\t\t\tlower_header = snake_case(header)\n\t\t\t\tdefault_value = get_method_name_for_header(lower_header)\n\t\t\t\toptions = [*dropdown_options]\n\t\t\t\toptions.remove(default_value)\n\t\t\t\twith colums[index % column_count]:\n\t\t\t\t\tselectbox = st.selectbox(\n\t\t\t\t\t\tlabel=header,\n\t\t\t\t\t\tplaceholder=default_value,\n\t\t\t\t\t\toptions=[default_value, *options],\n\t\t\t\t\t\tkey=lower_header,",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
     {
-        "label": "\t\t\tdefault_value",
+        "label": "\t\t\t\tdefault_value",
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\t\tdefault_value = get_method_name_for_header(lower_header)\n\t\t\toptions = [*dropdown_options]\n\t\t\toptions.remove(default_value)\n\t\t\twith colums[index % column_count]:\n\t\t\t\tselectbox = st.selectbox(\n\t\t\t\t\tlabel=header,\n\t\t\t\t\tplaceholder=default_value,\n\t\t\t\t\toptions=[default_value, *options],\n\t\t\t\t\tkey=lower_header,\n\t\t\t\t)",
+        "peekOfCode": "\t\t\t\tdefault_value = get_method_name_for_header(lower_header)\n\t\t\t\toptions = [*dropdown_options]\n\t\t\t\toptions.remove(default_value)\n\t\t\t\twith colums[index % column_count]:\n\t\t\t\t\tselectbox = st.selectbox(\n\t\t\t\t\t\tlabel=header,\n\t\t\t\t\t\tplaceholder=default_value,\n\t\t\t\t\t\toptions=[default_value, *options],\n\t\t\t\t\t\tkey=lower_header,\n\t\t\t\t\t)",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
     {
-        "label": "\t\t\toptions",
+        "label": "\t\t\t\toptions",
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\t\toptions = [*dropdown_options]\n\t\t\toptions.remove(default_value)\n\t\t\twith colums[index % column_count]:\n\t\t\t\tselectbox = st.selectbox(\n\t\t\t\t\tlabel=header,\n\t\t\t\t\tplaceholder=default_value,\n\t\t\t\t\toptions=[default_value, *options],\n\t\t\t\t\tkey=lower_header,\n\t\t\t\t)\n\t\t\t\theader_selection_list.append(selectbox)",
+        "peekOfCode": "\t\t\t\toptions = [*dropdown_options]\n\t\t\t\toptions.remove(default_value)\n\t\t\t\twith colums[index % column_count]:\n\t\t\t\t\tselectbox = st.selectbox(\n\t\t\t\t\t\tlabel=header,\n\t\t\t\t\t\tplaceholder=default_value,\n\t\t\t\t\t\toptions=[default_value, *options],\n\t\t\t\t\t\tkey=lower_header,\n\t\t\t\t\t)\n\t\t\t\t\theader_selection_list.append(selectbox)",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
     {
-        "label": "\t\t\t\tselectbox",
+        "label": "\t\t\t\t\tselectbox",
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\t\t\tselectbox = st.selectbox(\n\t\t\t\t\tlabel=header,\n\t\t\t\t\tplaceholder=default_value,\n\t\t\t\t\toptions=[default_value, *options],\n\t\t\t\t\tkey=lower_header,\n\t\t\t\t)\n\t\t\t\theader_selection_list.append(selectbox)\n\t\tcol1, col2 = st.columns(2)\n\t\tno_of_records = col1.number_input(\"No. of records to Generate\", min_value=1)\n\t\tlocale_options = [locale.value for locale in Locale]",
+        "peekOfCode": "\t\t\t\t\tselectbox = st.selectbox(\n\t\t\t\t\t\tlabel=header,\n\t\t\t\t\t\tplaceholder=default_value,\n\t\t\t\t\t\toptions=[default_value, *options],\n\t\t\t\t\t\tkey=lower_header,\n\t\t\t\t\t)\n\t\t\t\t\theader_selection_list.append(selectbox)\n\t\t\tcol1, col2 = st.columns(2)\n\t\t\tno_of_records = col1.number_input(\"No. of records to Generate\", min_value=1)\n\t\t\tlocale_options = [locale.value for locale in Locale]",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
     {
-        "label": "\t\tno_of_records",
+        "label": "\t\t\tno_of_records",
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\tno_of_records = col1.number_input(\"No. of records to Generate\", min_value=1)\n\t\tlocale_options = [locale.value for locale in Locale]\n\t\tdefault_locale_value = Locale.EN.value\n\t\tlocale_options.remove(default_locale_value)\n\t\tlocale = col2.selectbox(\n\t\t\tlabel=\"Choose the Locale\",\n\t\t\toptions=[default_locale_value, *locale_options],\n\t\t)\n\t\tgenerate_records_btn = st.form_submit_button(\n\t\t\t\"Generate Records\", use_container_width=True, type=\"primary\"",
+        "peekOfCode": "\t\t\tno_of_records = col1.number_input(\"No. of records to Generate\", min_value=1)\n\t\t\tlocale_options = [locale.value for locale in Locale]\n\t\t\tdefault_locale_value = Locale.EN.value\n\t\t\tlocale_options.remove(default_locale_value)\n\t\t\tlocale = col2.selectbox(\n\t\t\t\tlabel=\"Choose the Locale\",\n\t\t\t\toptions=[default_locale_value, *locale_options],\n\t\t\t)\n\t\t\tgenerate_records_btn = st.form_submit_button(\n\t\t\t\t\"Generate Records\", use_container_width=True, type=\"primary\"",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
     {
-        "label": "\t\tlocale_options",
+        "label": "\t\t\tlocale_options",
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\tlocale_options = [locale.value for locale in Locale]\n\t\tdefault_locale_value = Locale.EN.value\n\t\tlocale_options.remove(default_locale_value)\n\t\tlocale = col2.selectbox(\n\t\t\tlabel=\"Choose the Locale\",\n\t\t\toptions=[default_locale_value, *locale_options],\n\t\t)\n\t\tgenerate_records_btn = st.form_submit_button(\n\t\t\t\"Generate Records\", use_container_width=True, type=\"primary\"\n\t\t)",
+        "peekOfCode": "\t\t\tlocale_options = [locale.value for locale in Locale]\n\t\t\tdefault_locale_value = Locale.EN.value\n\t\t\tlocale_options.remove(default_locale_value)\n\t\t\tlocale = col2.selectbox(\n\t\t\t\tlabel=\"Choose the Locale\",\n\t\t\t\toptions=[default_locale_value, *locale_options],\n\t\t\t)\n\t\t\tgenerate_records_btn = st.form_submit_button(\n\t\t\t\t\"Generate Records\", use_container_width=True, type=\"primary\"\n\t\t\t)",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
     {
-        "label": "\t\tdefault_locale_value",
+        "label": "\t\t\tdefault_locale_value",
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\tdefault_locale_value = Locale.EN.value\n\t\tlocale_options.remove(default_locale_value)\n\t\tlocale = col2.selectbox(\n\t\t\tlabel=\"Choose the Locale\",\n\t\t\toptions=[default_locale_value, *locale_options],\n\t\t)\n\t\tgenerate_records_btn = st.form_submit_button(\n\t\t\t\"Generate Records\", use_container_width=True, type=\"primary\"\n\t\t)\n\tif generate_records_btn:",
+        "peekOfCode": "\t\t\tdefault_locale_value = Locale.EN.value\n\t\t\tlocale_options.remove(default_locale_value)\n\t\t\tlocale = col2.selectbox(\n\t\t\t\tlabel=\"Choose the Locale\",\n\t\t\t\toptions=[default_locale_value, *locale_options],\n\t\t\t)\n\t\t\tgenerate_records_btn = st.form_submit_button(\n\t\t\t\t\"Generate Records\", use_container_width=True, type=\"primary\"\n\t\t\t)\n\t\tif generate_records_btn:",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
     {
-        "label": "\t\tlocale",
+        "label": "\t\t\tlocale",
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\tlocale = col2.selectbox(\n\t\t\tlabel=\"Choose the Locale\",\n\t\t\toptions=[default_locale_value, *locale_options],\n\t\t)\n\t\tgenerate_records_btn = st.form_submit_button(\n\t\t\t\"Generate Records\", use_container_width=True, type=\"primary\"\n\t\t)\n\tif generate_records_btn:\n\t\t# df, csv_path = generate_csv(\n\t\tdf = generate_csv(",
+        "peekOfCode": "\t\t\tlocale = col2.selectbox(\n\t\t\t\tlabel=\"Choose the Locale\",\n\t\t\t\toptions=[default_locale_value, *locale_options],\n\t\t\t)\n\t\t\tgenerate_records_btn = st.form_submit_button(\n\t\t\t\t\"Generate Records\", use_container_width=True, type=\"primary\"\n\t\t\t)\n\t\tif generate_records_btn:\n\t\t\t# df, csv_path = generate_csv(\n\t\t\tdf = generate_csv(",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
     {
-        "label": "\t\tgenerate_records_btn",
+        "label": "\t\t\tgenerate_records_btn",
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\tgenerate_records_btn = st.form_submit_button(\n\t\t\t\"Generate Records\", use_container_width=True, type=\"primary\"\n\t\t)\n\tif generate_records_btn:\n\t\t# df, csv_path = generate_csv(\n\t\tdf = generate_csv(\n\t\t\theader_selection_list,\n\t\t\tlocale,\n\t\t\tno_of_records,\n\t\t\theaders,",
+        "peekOfCode": "\t\t\tgenerate_records_btn = st.form_submit_button(\n\t\t\t\t\"Generate Records\", use_container_width=True, type=\"primary\"\n\t\t\t)\n\t\tif generate_records_btn:\n\t\t\t# df, csv_path = generate_csv(\n\t\t\tdf = generate_csv(\n\t\t\t\theader_selection_list,\n\t\t\t\tlocale,\n\t\t\t\tno_of_records,\n\t\t\t\theaders,",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
     {
-        "label": "\t\tdf",
+        "label": "\t\t\tdf",
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\tdf = generate_csv(\n\t\t\theader_selection_list,\n\t\t\tlocale,\n\t\t\tno_of_records,\n\t\t\theaders,\n\t\t\tfilename_with_extension,\n\t\t)\n\t\tst.dataframe(df)",
+        "peekOfCode": "\t\t\tdf = generate_csv(\n\t\t\t\theader_selection_list,\n\t\t\t\tlocale,\n\t\t\t\tno_of_records,\n\t\t\t\theaders,\n\t\t\t\tfilename_with_extension,\n\t\t\t)\n\t\t\tst.dataframe(df)",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     }

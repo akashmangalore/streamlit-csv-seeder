@@ -6,6 +6,14 @@ import streamlit as st
 from mimesis import BaseDataProvider, BaseProvider, Generic, Locale
 from pydash import snake_case
 
+PRIMARY_COLOR = "#FF4B4B"
+# Title HTML content for the centered title with primary color for "Seeder"
+title_html_content = f"""
+<div style="text-align: center;">
+    <h1>CSV <span style="color:{PRIMARY_COLOR};">Seeder</span></h1>
+</div>
+"""
+
 STATUS_OPTION_LIST = ["Pending", "In-Review", "Approved", "Rejected", "Completed"]
 
 
@@ -109,55 +117,59 @@ def generate_csv(header_selection_list, locale, no_of_records, headers, filename
 	# return df, csv_path
 
 
-uploaded_csv_file = st.file_uploader("Choose a CSV File", type=["csv"])
-if uploaded_csv_file is not None:
-	with st.form("process_csv_upload"):
-		generate_mimesis_method_dict_for_locale(Locale.EN)
-		headers = get_csv_headers(uploaded_csv_file)
-		filename_with_extension = os.path.basename(uploaded_csv_file.name)
-		st.markdown(
-			'<h3>Select <b style="color:#FF4B4B;">Seed Type</b> for each of the Headers</h3>',
-			unsafe_allow_html=True,
-		)
-		# st.subheader("Select _Type_ of each Headers")
-		dropdown_options = method_name_list
-		header_selection_list = []
+if __name__ == "__main__":
+	# Code Start
+	# Display the Title HTML content
+	st.markdown(title_html_content, unsafe_allow_html=True)
+	uploaded_csv_file = st.file_uploader("Choose a CSV File", type=["csv"])
+	if uploaded_csv_file is not None:
+		with st.form("process_csv_upload"):
+			generate_mimesis_method_dict_for_locale(Locale.EN)
+			headers = get_csv_headers(uploaded_csv_file)
+			filename_with_extension = os.path.basename(uploaded_csv_file.name)
+			st.markdown(
+				f"<h3>Select <b style='color:{PRIMARY_COLOR};'>Seed Type</b> for each of the Headers</h3>",
+				unsafe_allow_html=True,
+			)
+			# st.subheader("Select _Type_ of each Headers")
+			dropdown_options = method_name_list
+			header_selection_list = []
 
-		column_count = 4
-		colums = st.columns(column_count)
-		for index, header in enumerate(headers):
-			lower_header = snake_case(header)
-			default_value = get_method_name_for_header(lower_header)
-			options = [*dropdown_options]
-			options.remove(default_value)
-			with colums[index % column_count]:
-				selectbox = st.selectbox(
-					label=header,
-					placeholder=default_value,
-					options=[default_value, *options],
-					key=lower_header,
-				)
-				header_selection_list.append(selectbox)
+			column_count = 4
+			colums = st.columns(column_count)
+			for index, header in enumerate(headers):
+				lower_header = snake_case(header)
+				default_value = get_method_name_for_header(lower_header)
+				options = [*dropdown_options]
+				options.remove(default_value)
+				with colums[index % column_count]:
+					selectbox = st.selectbox(
+						label=header,
+						placeholder=default_value,
+						options=[default_value, *options],
+						key=lower_header,
+					)
+					header_selection_list.append(selectbox)
 
-		col1, col2 = st.columns(2)
-		no_of_records = col1.number_input("No. of records to Generate", min_value=1)
-		locale_options = [locale.value for locale in Locale]
-		default_locale_value = Locale.EN.value
-		locale_options.remove(default_locale_value)
-		locale = col2.selectbox(
-			label="Choose the Locale",
-			options=[default_locale_value, *locale_options],
-		)
-		generate_records_btn = st.form_submit_button(
-			"Generate Records", use_container_width=True, type="primary"
-		)
-	if generate_records_btn:
-		# df, csv_path = generate_csv(
-		df = generate_csv(
-			header_selection_list,
-			locale,
-			no_of_records,
-			headers,
-			filename_with_extension,
-		)
-		st.dataframe(df)
+			col1, col2 = st.columns(2)
+			no_of_records = col1.number_input("No. of records to Generate", min_value=1)
+			locale_options = [locale.value for locale in Locale]
+			default_locale_value = Locale.EN.value
+			locale_options.remove(default_locale_value)
+			locale = col2.selectbox(
+				label="Choose the Locale",
+				options=[default_locale_value, *locale_options],
+			)
+			generate_records_btn = st.form_submit_button(
+				"Generate Records", use_container_width=True, type="primary"
+			)
+		if generate_records_btn:
+			# df, csv_path = generate_csv(
+			df = generate_csv(
+				header_selection_list,
+				locale,
+				no_of_records,
+				headers,
+				filename_with_extension,
+			)
+			st.dataframe(df)
