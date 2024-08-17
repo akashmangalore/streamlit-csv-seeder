@@ -103,10 +103,10 @@ def generate_csv(header_selection_list, locale, no_of_records, headers, filename
 		records.append(record)
 
 	df = pd.DataFrame(records)
-	csv_path = f"temp/{no_of_records} Records of {filename} ({locale}).csv"
-	df.to_csv(csv_path, index=False, encoding="utf-8")
-
-	return df, csv_path
+	return df
+	# csv_path = f"temp/{no_of_records} Records of {filename} ({locale}).csv"
+	# df.to_csv(csv_path, index=False, encoding="utf-8")
+	# return df, csv_path
 
 
 uploaded_csv_file = st.file_uploader("Choose a CSV File", type=["csv"])

@@ -439,7 +439,7 @@
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\trecords = []\n\tgenerate_mimesis_method_dict_for_locale(locale)\n\tfor _ in range(no_of_records):\n\t\trecord = {}\n\t\tfor index, method_name in enumerate(method_name_list):\n\t\t\tmethod = method_name_method_dict.get(method_name, DEFUALT_METHOD_NAME)\n\t\t\trecord[headers[index]] = method()\n\t\trecords.append(record)\n\tdf = pd.DataFrame(records)\n\tcsv_path = f\"temp/{no_of_records} Records of {filename} ({locale}).csv\"",
+        "peekOfCode": "\trecords = []\n\tgenerate_mimesis_method_dict_for_locale(locale)\n\tfor _ in range(no_of_records):\n\t\trecord = {}\n\t\tfor index, method_name in enumerate(method_name_list):\n\t\t\tmethod = method_name_method_dict.get(method_name, DEFUALT_METHOD_NAME)\n\t\t\trecord[headers[index]] = method()\n\t\trecords.append(record)\n\tdf = pd.DataFrame(records)\n\treturn df",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
@@ -448,7 +448,7 @@
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\trecord = {}\n\t\tfor index, method_name in enumerate(method_name_list):\n\t\t\tmethod = method_name_method_dict.get(method_name, DEFUALT_METHOD_NAME)\n\t\t\trecord[headers[index]] = method()\n\t\trecords.append(record)\n\tdf = pd.DataFrame(records)\n\tcsv_path = f\"temp/{no_of_records} Records of {filename} ({locale}).csv\"\n\tdf.to_csv(csv_path, index=False, encoding=\"utf-8\")\n\treturn df, csv_path\nuploaded_csv_file = st.file_uploader(\"Choose a CSV File\", type=[\"csv\"])",
+        "peekOfCode": "\t\trecord = {}\n\t\tfor index, method_name in enumerate(method_name_list):\n\t\t\tmethod = method_name_method_dict.get(method_name, DEFUALT_METHOD_NAME)\n\t\t\trecord[headers[index]] = method()\n\t\trecords.append(record)\n\tdf = pd.DataFrame(records)\n\treturn df\n\t# csv_path = f\"temp/{no_of_records} Records of {filename} ({locale}).csv\"\n\t# df.to_csv(csv_path, index=False, encoding=\"utf-8\")\n\t# return df, csv_path",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
@@ -457,7 +457,7 @@
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\t\tmethod = method_name_method_dict.get(method_name, DEFUALT_METHOD_NAME)\n\t\t\trecord[headers[index]] = method()\n\t\trecords.append(record)\n\tdf = pd.DataFrame(records)\n\tcsv_path = f\"temp/{no_of_records} Records of {filename} ({locale}).csv\"\n\tdf.to_csv(csv_path, index=False, encoding=\"utf-8\")\n\treturn df, csv_path\nuploaded_csv_file = st.file_uploader(\"Choose a CSV File\", type=[\"csv\"])\nif uploaded_csv_file is not None:\n\twith st.form(\"process_csv_upload\"):",
+        "peekOfCode": "\t\t\tmethod = method_name_method_dict.get(method_name, DEFUALT_METHOD_NAME)\n\t\t\trecord[headers[index]] = method()\n\t\trecords.append(record)\n\tdf = pd.DataFrame(records)\n\treturn df\n\t# csv_path = f\"temp/{no_of_records} Records of {filename} ({locale}).csv\"\n\t# df.to_csv(csv_path, index=False, encoding=\"utf-8\")\n\t# return df, csv_path\nuploaded_csv_file = st.file_uploader(\"Choose a CSV File\", type=[\"csv\"])\nif uploaded_csv_file is not None:",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
@@ -466,7 +466,7 @@
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\t\trecord[headers[index]] = method()\n\t\trecords.append(record)\n\tdf = pd.DataFrame(records)\n\tcsv_path = f\"temp/{no_of_records} Records of {filename} ({locale}).csv\"\n\tdf.to_csv(csv_path, index=False, encoding=\"utf-8\")\n\treturn df, csv_path\nuploaded_csv_file = st.file_uploader(\"Choose a CSV File\", type=[\"csv\"])\nif uploaded_csv_file is not None:\n\twith st.form(\"process_csv_upload\"):\n\t\tgenerate_mimesis_method_dict_for_locale(Locale.EN)",
+        "peekOfCode": "\t\t\trecord[headers[index]] = method()\n\t\trecords.append(record)\n\tdf = pd.DataFrame(records)\n\treturn df\n\t# csv_path = f\"temp/{no_of_records} Records of {filename} ({locale}).csv\"\n\t# df.to_csv(csv_path, index=False, encoding=\"utf-8\")\n\t# return df, csv_path\nuploaded_csv_file = st.file_uploader(\"Choose a CSV File\", type=[\"csv\"])\nif uploaded_csv_file is not None:\n\twith st.form(\"process_csv_upload\"):",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
@@ -475,16 +475,7 @@
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\tdf = pd.DataFrame(records)\n\tcsv_path = f\"temp/{no_of_records} Records of {filename} ({locale}).csv\"\n\tdf.to_csv(csv_path, index=False, encoding=\"utf-8\")\n\treturn df, csv_path\nuploaded_csv_file = st.file_uploader(\"Choose a CSV File\", type=[\"csv\"])\nif uploaded_csv_file is not None:\n\twith st.form(\"process_csv_upload\"):\n\t\tgenerate_mimesis_method_dict_for_locale(Locale.EN)\n\t\theaders = get_csv_headers(uploaded_csv_file)\n\t\tfilename_with_extension = os.path.basename(uploaded_csv_file.name)",
-        "detail": "streamlit_csv_seeder.main",
-        "documentation": {}
-    },
-    {
-        "label": "\tcsv_path",
-        "kind": 5,
-        "importPath": "streamlit_csv_seeder.main",
-        "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\tcsv_path = f\"temp/{no_of_records} Records of {filename} ({locale}).csv\"\n\tdf.to_csv(csv_path, index=False, encoding=\"utf-8\")\n\treturn df, csv_path\nuploaded_csv_file = st.file_uploader(\"Choose a CSV File\", type=[\"csv\"])\nif uploaded_csv_file is not None:\n\twith st.form(\"process_csv_upload\"):\n\t\tgenerate_mimesis_method_dict_for_locale(Locale.EN)\n\t\theaders = get_csv_headers(uploaded_csv_file)\n\t\tfilename_with_extension = os.path.basename(uploaded_csv_file.name)\n\t\tst.subheader(\"Select _Type_ of each Headers\")",
+        "peekOfCode": "\tdf = pd.DataFrame(records)\n\treturn df\n\t# csv_path = f\"temp/{no_of_records} Records of {filename} ({locale}).csv\"\n\t# df.to_csv(csv_path, index=False, encoding=\"utf-8\")\n\t# return df, csv_path\nuploaded_csv_file = st.file_uploader(\"Choose a CSV File\", type=[\"csv\"])\nif uploaded_csv_file is not None:\n\twith st.form(\"process_csv_upload\"):\n\t\tgenerate_mimesis_method_dict_for_locale(Locale.EN)\n\t\theaders = get_csv_headers(uploaded_csv_file)",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
