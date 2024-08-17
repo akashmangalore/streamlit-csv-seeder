@@ -115,7 +115,11 @@ if uploaded_csv_file is not None:
 		generate_mimesis_method_dict_for_locale(Locale.EN)
 		headers = get_csv_headers(uploaded_csv_file)
 		filename_with_extension = os.path.basename(uploaded_csv_file.name)
-		st.subheader("Select _Type_ of each Headers")
+		st.markdown(
+			'<h3>Select <b style="color:#FF4B4B;">Seed Type</b> for each of the Headers</h3>',
+			unsafe_allow_html=True,
+		)
+		# st.subheader("Select _Type_ of each Headers")
 		dropdown_options = method_name_list
 		header_selection_list = []
 
@@ -135,15 +139,18 @@ if uploaded_csv_file is not None:
 				)
 				header_selection_list.append(selectbox)
 
-		no_of_records = st.number_input("No. of records to Generate", min_value=1)
+		col1, col2 = st.columns(2)
+		no_of_records = col1.number_input("No. of records to Generate", min_value=1)
 		locale_options = [locale.value for locale in Locale]
 		default_locale_value = Locale.EN.value
 		locale_options.remove(default_locale_value)
-		locale = st.selectbox(
+		locale = col2.selectbox(
 			label="Choose the Locale",
 			options=[default_locale_value, *locale_options],
 		)
-		generate_records_btn = st.form_submit_button("Generate Records")
+		generate_records_btn = st.form_submit_button(
+			"Generate Records", use_container_width=True, type="primary"
+		)
 	if generate_records_btn:
 		# df, csv_path = generate_csv(
 		df = generate_csv(
