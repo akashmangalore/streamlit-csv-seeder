@@ -1,0 +1,635 @@
+[
+    {
+        "label": "runpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "runpy",
+        "description": "runpy",
+        "detail": "runpy",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "inspect",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "inspect",
+        "description": "inspect",
+        "detail": "inspect",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
+        "label": "BaseDataProvider",
+        "importPath": "mimesis",
+        "description": "mimesis",
+        "isExtraImport": true,
+        "detail": "mimesis",
+        "documentation": {}
+    },
+    {
+        "label": "BaseProvider",
+        "importPath": "mimesis",
+        "description": "mimesis",
+        "isExtraImport": true,
+        "detail": "mimesis",
+        "documentation": {}
+    },
+    {
+        "label": "Generic",
+        "importPath": "mimesis",
+        "description": "mimesis",
+        "isExtraImport": true,
+        "detail": "mimesis",
+        "documentation": {}
+    },
+    {
+        "label": "Locale",
+        "importPath": "mimesis",
+        "description": "mimesis",
+        "isExtraImport": true,
+        "detail": "mimesis",
+        "documentation": {}
+    },
+    {
+        "label": "snake_case",
+        "importPath": "pydash",
+        "description": "pydash",
+        "isExtraImport": true,
+        "detail": "pydash",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"streamlit-csv-seeder-py3.12\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"streamlit-csv-seeder-py3.12\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"streamlit-csv-seeder-py3.12\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"streamlit-csv-seeder-py3.12\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"streamlit-csv-seeder-py3.12\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "Status",
+        "kind": 6,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "class Status(BaseProvider):\n\tdef status(self) -> str:\n\t\treturn self.random.choice(STATUS_OPTION_LIST)\nDEFUALT_METHOD_NAME = \"word\"\nDEFUALT_ID_METHOD_NAME = \"cid\"\nprovider_class_list = []\nprovider_name_provider_dict = {}\nmethod_name_method_dict = {}\nmethod_name_list = []\nignore_provider_list = [BaseProvider(), BaseDataProvider()]",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "generate_mimesis_method_dict_for_locale",
+        "kind": 2,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "def generate_mimesis_method_dict_for_locale(value):\n\tglobal provider_class_list\n\tglobal provider_name_provider_dict\n\tglobal method_name_method_dict\n\tglobal method_name_list\n\tgeneric = Generic(locale=value)\n\t# Registering the new provider\n\tgeneric.add_provider(Status)\n\t# generic = Generic(locale=Locale[value])\n\t# person = Person()",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "get_csv_headers",
+        "kind": 2,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "def get_csv_headers(filepath):\n\tdf = pd.read_csv(filepath)\n\treturn list(df.columns)\ndef get_method_name_for_header(header):\n\tmethod_name = DEFUALT_METHOD_NAME\n\tif header in method_name_list:\n\t\tmethod_name = header\n\telif header in [\"id\", \"uid\"]:\n\t\treturn DEFUALT_ID_METHOD_NAME\n\telse:",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "get_method_name_for_header",
+        "kind": 2,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "def get_method_name_for_header(header):\n\tmethod_name = DEFUALT_METHOD_NAME\n\tif header in method_name_list:\n\t\tmethod_name = header\n\telif header in [\"id\", \"uid\"]:\n\t\treturn DEFUALT_ID_METHOD_NAME\n\telse:\n\t\tfor name in method_name_list:\n\t\t\tif header in name:\n\t\t\t\tmethod_name = name",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "generate_csv",
+        "kind": 2,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "def generate_csv(header_selection_list, locale, no_of_records, headers, filename_with_extension):\n\tmethod_name_list = header_selection_list\n\tno_of_records = no_of_records\n\theaders = headers\n\tfilename_with_extension = filename_with_extension\n\tfilename, _ = os.path.splitext(filename_with_extension)\n\trecords = []\n\tgenerate_mimesis_method_dict_for_locale(locale)\n\tfor _ in range(no_of_records):\n\t\trecord = {}",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "STATUS_OPTION_LIST",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "STATUS_OPTION_LIST = [\"Pending\", \"In-Review\", \"Approved\", \"Rejected\", \"Completed\"]\nclass Status(BaseProvider):\n\tdef status(self) -> str:\n\t\treturn self.random.choice(STATUS_OPTION_LIST)\nDEFUALT_METHOD_NAME = \"word\"\nDEFUALT_ID_METHOD_NAME = \"cid\"\nprovider_class_list = []\nprovider_name_provider_dict = {}\nmethod_name_method_dict = {}\nmethod_name_list = []",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "DEFUALT_METHOD_NAME",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "DEFUALT_METHOD_NAME = \"word\"\nDEFUALT_ID_METHOD_NAME = \"cid\"\nprovider_class_list = []\nprovider_name_provider_dict = {}\nmethod_name_method_dict = {}\nmethod_name_list = []\nignore_provider_list = [BaseProvider(), BaseDataProvider()]\nignore_method_name_list = [\n\tmethod_name\n\tfor provider in ignore_provider_list",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "DEFUALT_ID_METHOD_NAME",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "DEFUALT_ID_METHOD_NAME = \"cid\"\nprovider_class_list = []\nprovider_name_provider_dict = {}\nmethod_name_method_dict = {}\nmethod_name_list = []\nignore_provider_list = [BaseProvider(), BaseDataProvider()]\nignore_method_name_list = [\n\tmethod_name\n\tfor provider in ignore_provider_list\n\tfor method_name, method in inspect.getmembers(provider, predicate=inspect.ismethod)",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "provider_class_list",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "provider_class_list = []\nprovider_name_provider_dict = {}\nmethod_name_method_dict = {}\nmethod_name_list = []\nignore_provider_list = [BaseProvider(), BaseDataProvider()]\nignore_method_name_list = [\n\tmethod_name\n\tfor provider in ignore_provider_list\n\tfor method_name, method in inspect.getmembers(provider, predicate=inspect.ismethod)\n\tif not method_name.startswith(\"_\")",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "provider_name_provider_dict",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "provider_name_provider_dict = {}\nmethod_name_method_dict = {}\nmethod_name_list = []\nignore_provider_list = [BaseProvider(), BaseDataProvider()]\nignore_method_name_list = [\n\tmethod_name\n\tfor provider in ignore_provider_list\n\tfor method_name, method in inspect.getmembers(provider, predicate=inspect.ismethod)\n\tif not method_name.startswith(\"_\")\n]",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "method_name_method_dict",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "method_name_method_dict = {}\nmethod_name_list = []\nignore_provider_list = [BaseProvider(), BaseDataProvider()]\nignore_method_name_list = [\n\tmethod_name\n\tfor provider in ignore_provider_list\n\tfor method_name, method in inspect.getmembers(provider, predicate=inspect.ismethod)\n\tif not method_name.startswith(\"_\")\n]\ndef generate_mimesis_method_dict_for_locale(value):",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "method_name_list",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "method_name_list = []\nignore_provider_list = [BaseProvider(), BaseDataProvider()]\nignore_method_name_list = [\n\tmethod_name\n\tfor provider in ignore_provider_list\n\tfor method_name, method in inspect.getmembers(provider, predicate=inspect.ismethod)\n\tif not method_name.startswith(\"_\")\n]\ndef generate_mimesis_method_dict_for_locale(value):\n\tglobal provider_class_list",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "ignore_provider_list",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "ignore_provider_list = [BaseProvider(), BaseDataProvider()]\nignore_method_name_list = [\n\tmethod_name\n\tfor provider in ignore_provider_list\n\tfor method_name, method in inspect.getmembers(provider, predicate=inspect.ismethod)\n\tif not method_name.startswith(\"_\")\n]\ndef generate_mimesis_method_dict_for_locale(value):\n\tglobal provider_class_list\n\tglobal provider_name_provider_dict",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "ignore_method_name_list",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "ignore_method_name_list = [\n\tmethod_name\n\tfor provider in ignore_provider_list\n\tfor method_name, method in inspect.getmembers(provider, predicate=inspect.ismethod)\n\tif not method_name.startswith(\"_\")\n]\ndef generate_mimesis_method_dict_for_locale(value):\n\tglobal provider_class_list\n\tglobal provider_name_provider_dict\n\tglobal method_name_method_dict",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\tgeneric",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\tgeneric = Generic(locale=value)\n\t# Registering the new provider\n\tgeneric.add_provider(Status)\n\t# generic = Generic(locale=Locale[value])\n\t# person = Person()\n\t# address = Address()\n\t# text = Text()\n\t# List of Mimesis providers to introspect\n\t# providers = [generic, person, address, text]\n\tprovider_class_list = [generic]",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\tprovider_class_list",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\tprovider_class_list = [generic]\n\tprovider_name_provider_dict = {\n\t\tprovider_name: provider\n\t\tfor provider_class in provider_class_list\n\t\tfor provider_name, provider in inspect.getmembers(provider_class)\n\t}\n\tmethod_name_method_dict = {\n\t\tmethod_name: method\n\t\tfor provider in provider_name_provider_dict.values()\n\t\tfor method_name, method in inspect.getmembers(provider, predicate=inspect.ismethod)",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\tprovider_name_provider_dict",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\tprovider_name_provider_dict = {\n\t\tprovider_name: provider\n\t\tfor provider_class in provider_class_list\n\t\tfor provider_name, provider in inspect.getmembers(provider_class)\n\t}\n\tmethod_name_method_dict = {\n\t\tmethod_name: method\n\t\tfor provider in provider_name_provider_dict.values()\n\t\tfor method_name, method in inspect.getmembers(provider, predicate=inspect.ismethod)\n\t\tif not method_name.startswith(\"_\") and method_name not in ignore_method_name_list",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\tmethod_name_method_dict",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\tmethod_name_method_dict = {\n\t\tmethod_name: method\n\t\tfor provider in provider_name_provider_dict.values()\n\t\tfor method_name, method in inspect.getmembers(provider, predicate=inspect.ismethod)\n\t\tif not method_name.startswith(\"_\") and method_name not in ignore_method_name_list\n\t}\n\tmethod_name_list = list(method_name_method_dict.keys())\ndef get_csv_headers(filepath):\n\tdf = pd.read_csv(filepath)\n\treturn list(df.columns)",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\tmethod_name_list",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\tmethod_name_list = list(method_name_method_dict.keys())\ndef get_csv_headers(filepath):\n\tdf = pd.read_csv(filepath)\n\treturn list(df.columns)\ndef get_method_name_for_header(header):\n\tmethod_name = DEFUALT_METHOD_NAME\n\tif header in method_name_list:\n\t\tmethod_name = header\n\telif header in [\"id\", \"uid\"]:\n\t\treturn DEFUALT_ID_METHOD_NAME",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\tdf",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\tdf = pd.read_csv(filepath)\n\treturn list(df.columns)\ndef get_method_name_for_header(header):\n\tmethod_name = DEFUALT_METHOD_NAME\n\tif header in method_name_list:\n\t\tmethod_name = header\n\telif header in [\"id\", \"uid\"]:\n\t\treturn DEFUALT_ID_METHOD_NAME\n\telse:\n\t\tfor name in method_name_list:",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\tmethod_name",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\tmethod_name = DEFUALT_METHOD_NAME\n\tif header in method_name_list:\n\t\tmethod_name = header\n\telif header in [\"id\", \"uid\"]:\n\t\treturn DEFUALT_ID_METHOD_NAME\n\telse:\n\t\tfor name in method_name_list:\n\t\t\tif header in name:\n\t\t\t\tmethod_name = name\n\t\t\t\tbreak",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tmethod_name",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\t\tmethod_name = header\n\telif header in [\"id\", \"uid\"]:\n\t\treturn DEFUALT_ID_METHOD_NAME\n\telse:\n\t\tfor name in method_name_list:\n\t\t\tif header in name:\n\t\t\t\tmethod_name = name\n\t\t\t\tbreak\n\t\tif \"id\" in header:\n\t\t\treturn DEFUALT_ID_METHOD_NAME",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\tmethod_name",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\t\t\t\tmethod_name = name\n\t\t\t\tbreak\n\t\tif \"id\" in header:\n\t\t\treturn DEFUALT_ID_METHOD_NAME\n\treturn method_name\ndef generate_csv(header_selection_list, locale, no_of_records, headers, filename_with_extension):\n\tmethod_name_list = header_selection_list\n\tno_of_records = no_of_records\n\theaders = headers\n\tfilename_with_extension = filename_with_extension",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\tmethod_name_list",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\tmethod_name_list = header_selection_list\n\tno_of_records = no_of_records\n\theaders = headers\n\tfilename_with_extension = filename_with_extension\n\tfilename, _ = os.path.splitext(filename_with_extension)\n\trecords = []\n\tgenerate_mimesis_method_dict_for_locale(locale)\n\tfor _ in range(no_of_records):\n\t\trecord = {}\n\t\tfor index, method_name in enumerate(method_name_list):",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\tno_of_records",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\tno_of_records = no_of_records\n\theaders = headers\n\tfilename_with_extension = filename_with_extension\n\tfilename, _ = os.path.splitext(filename_with_extension)\n\trecords = []\n\tgenerate_mimesis_method_dict_for_locale(locale)\n\tfor _ in range(no_of_records):\n\t\trecord = {}\n\t\tfor index, method_name in enumerate(method_name_list):\n\t\t\tmethod = method_name_method_dict.get(method_name, DEFUALT_METHOD_NAME)",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\theaders",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\theaders = headers\n\tfilename_with_extension = filename_with_extension\n\tfilename, _ = os.path.splitext(filename_with_extension)\n\trecords = []\n\tgenerate_mimesis_method_dict_for_locale(locale)\n\tfor _ in range(no_of_records):\n\t\trecord = {}\n\t\tfor index, method_name in enumerate(method_name_list):\n\t\t\tmethod = method_name_method_dict.get(method_name, DEFUALT_METHOD_NAME)\n\t\t\trecord[headers[index]] = method()",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\tfilename_with_extension",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\tfilename_with_extension = filename_with_extension\n\tfilename, _ = os.path.splitext(filename_with_extension)\n\trecords = []\n\tgenerate_mimesis_method_dict_for_locale(locale)\n\tfor _ in range(no_of_records):\n\t\trecord = {}\n\t\tfor index, method_name in enumerate(method_name_list):\n\t\t\tmethod = method_name_method_dict.get(method_name, DEFUALT_METHOD_NAME)\n\t\t\trecord[headers[index]] = method()\n\t\trecords.append(record)",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\trecords",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\trecords = []\n\tgenerate_mimesis_method_dict_for_locale(locale)\n\tfor _ in range(no_of_records):\n\t\trecord = {}\n\t\tfor index, method_name in enumerate(method_name_list):\n\t\t\tmethod = method_name_method_dict.get(method_name, DEFUALT_METHOD_NAME)\n\t\t\trecord[headers[index]] = method()\n\t\trecords.append(record)\n\tdf = pd.DataFrame(records)\n\tcsv_path = f\"temp/{no_of_records} Records of {filename} ({locale}).csv\"",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\t\trecord",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\t\trecord = {}\n\t\tfor index, method_name in enumerate(method_name_list):\n\t\t\tmethod = method_name_method_dict.get(method_name, DEFUALT_METHOD_NAME)\n\t\t\trecord[headers[index]] = method()\n\t\trecords.append(record)\n\tdf = pd.DataFrame(records)\n\tcsv_path = f\"temp/{no_of_records} Records of {filename} ({locale}).csv\"\n\tdf.to_csv(csv_path, index=False, encoding=\"utf-8\")\n\treturn df, csv_path\nuploaded_csv_file = st.file_uploader(\"Choose a CSV File\", type=[\"csv\"])",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tmethod",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\t\t\tmethod = method_name_method_dict.get(method_name, DEFUALT_METHOD_NAME)\n\t\t\trecord[headers[index]] = method()\n\t\trecords.append(record)\n\tdf = pd.DataFrame(records)\n\tcsv_path = f\"temp/{no_of_records} Records of {filename} ({locale}).csv\"\n\tdf.to_csv(csv_path, index=False, encoding=\"utf-8\")\n\treturn df, csv_path\nuploaded_csv_file = st.file_uploader(\"Choose a CSV File\", type=[\"csv\"])\nif uploaded_csv_file is not None:\n\twith st.form(\"process_csv_upload\"):",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\trecord[headers[index]]",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\t\t\trecord[headers[index]] = method()\n\t\trecords.append(record)\n\tdf = pd.DataFrame(records)\n\tcsv_path = f\"temp/{no_of_records} Records of {filename} ({locale}).csv\"\n\tdf.to_csv(csv_path, index=False, encoding=\"utf-8\")\n\treturn df, csv_path\nuploaded_csv_file = st.file_uploader(\"Choose a CSV File\", type=[\"csv\"])\nif uploaded_csv_file is not None:\n\twith st.form(\"process_csv_upload\"):\n\t\tgenerate_mimesis_method_dict_for_locale(Locale.EN)",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\tdf",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\tdf = pd.DataFrame(records)\n\tcsv_path = f\"temp/{no_of_records} Records of {filename} ({locale}).csv\"\n\tdf.to_csv(csv_path, index=False, encoding=\"utf-8\")\n\treturn df, csv_path\nuploaded_csv_file = st.file_uploader(\"Choose a CSV File\", type=[\"csv\"])\nif uploaded_csv_file is not None:\n\twith st.form(\"process_csv_upload\"):\n\t\tgenerate_mimesis_method_dict_for_locale(Locale.EN)\n\t\theaders = get_csv_headers(uploaded_csv_file)\n\t\tfilename_with_extension = os.path.basename(uploaded_csv_file.name)",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\tcsv_path",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\tcsv_path = f\"temp/{no_of_records} Records of {filename} ({locale}).csv\"\n\tdf.to_csv(csv_path, index=False, encoding=\"utf-8\")\n\treturn df, csv_path\nuploaded_csv_file = st.file_uploader(\"Choose a CSV File\", type=[\"csv\"])\nif uploaded_csv_file is not None:\n\twith st.form(\"process_csv_upload\"):\n\t\tgenerate_mimesis_method_dict_for_locale(Locale.EN)\n\t\theaders = get_csv_headers(uploaded_csv_file)\n\t\tfilename_with_extension = os.path.basename(uploaded_csv_file.name)\n\t\tst.subheader(\"Select _Type_ of each Headers\")",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "uploaded_csv_file",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "uploaded_csv_file = st.file_uploader(\"Choose a CSV File\", type=[\"csv\"])\nif uploaded_csv_file is not None:\n\twith st.form(\"process_csv_upload\"):\n\t\tgenerate_mimesis_method_dict_for_locale(Locale.EN)\n\t\theaders = get_csv_headers(uploaded_csv_file)\n\t\tfilename_with_extension = os.path.basename(uploaded_csv_file.name)\n\t\tst.subheader(\"Select _Type_ of each Headers\")\n\t\tdropdown_options = method_name_list\n\t\theader_selection_list = []\n\t\tcolumn_count = 4",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\t\theaders",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\t\theaders = get_csv_headers(uploaded_csv_file)\n\t\tfilename_with_extension = os.path.basename(uploaded_csv_file.name)\n\t\tst.subheader(\"Select _Type_ of each Headers\")\n\t\tdropdown_options = method_name_list\n\t\theader_selection_list = []\n\t\tcolumn_count = 4\n\t\tcolums = st.columns(column_count)\n\t\tfor index, header in enumerate(headers):\n\t\t\tlower_header = snake_case(header)\n\t\t\tdefault_value = get_method_name_for_header(lower_header)",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tfilename_with_extension",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\t\tfilename_with_extension = os.path.basename(uploaded_csv_file.name)\n\t\tst.subheader(\"Select _Type_ of each Headers\")\n\t\tdropdown_options = method_name_list\n\t\theader_selection_list = []\n\t\tcolumn_count = 4\n\t\tcolums = st.columns(column_count)\n\t\tfor index, header in enumerate(headers):\n\t\t\tlower_header = snake_case(header)\n\t\t\tdefault_value = get_method_name_for_header(lower_header)\n\t\t\toptions = [*dropdown_options]",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tdropdown_options",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\t\tdropdown_options = method_name_list\n\t\theader_selection_list = []\n\t\tcolumn_count = 4\n\t\tcolums = st.columns(column_count)\n\t\tfor index, header in enumerate(headers):\n\t\t\tlower_header = snake_case(header)\n\t\t\tdefault_value = get_method_name_for_header(lower_header)\n\t\t\toptions = [*dropdown_options]\n\t\t\toptions.remove(default_value)\n\t\t\twith colums[index % column_count]:",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\t\theader_selection_list",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\t\theader_selection_list = []\n\t\tcolumn_count = 4\n\t\tcolums = st.columns(column_count)\n\t\tfor index, header in enumerate(headers):\n\t\t\tlower_header = snake_case(header)\n\t\t\tdefault_value = get_method_name_for_header(lower_header)\n\t\t\toptions = [*dropdown_options]\n\t\t\toptions.remove(default_value)\n\t\t\twith colums[index % column_count]:\n\t\t\t\tselectbox = st.selectbox(",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tcolumn_count",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\t\tcolumn_count = 4\n\t\tcolums = st.columns(column_count)\n\t\tfor index, header in enumerate(headers):\n\t\t\tlower_header = snake_case(header)\n\t\t\tdefault_value = get_method_name_for_header(lower_header)\n\t\t\toptions = [*dropdown_options]\n\t\t\toptions.remove(default_value)\n\t\t\twith colums[index % column_count]:\n\t\t\t\tselectbox = st.selectbox(\n\t\t\t\t\tlabel=header,",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tcolums",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\t\tcolums = st.columns(column_count)\n\t\tfor index, header in enumerate(headers):\n\t\t\tlower_header = snake_case(header)\n\t\t\tdefault_value = get_method_name_for_header(lower_header)\n\t\t\toptions = [*dropdown_options]\n\t\t\toptions.remove(default_value)\n\t\t\twith colums[index % column_count]:\n\t\t\t\tselectbox = st.selectbox(\n\t\t\t\t\tlabel=header,\n\t\t\t\t\tplaceholder=default_value,",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tlower_header",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\t\t\tlower_header = snake_case(header)\n\t\t\tdefault_value = get_method_name_for_header(lower_header)\n\t\t\toptions = [*dropdown_options]\n\t\t\toptions.remove(default_value)\n\t\t\twith colums[index % column_count]:\n\t\t\t\tselectbox = st.selectbox(\n\t\t\t\t\tlabel=header,\n\t\t\t\t\tplaceholder=default_value,\n\t\t\t\t\toptions=[default_value, *options],\n\t\t\t\t\tkey=lower_header,",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tdefault_value",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\t\t\tdefault_value = get_method_name_for_header(lower_header)\n\t\t\toptions = [*dropdown_options]\n\t\t\toptions.remove(default_value)\n\t\t\twith colums[index % column_count]:\n\t\t\t\tselectbox = st.selectbox(\n\t\t\t\t\tlabel=header,\n\t\t\t\t\tplaceholder=default_value,\n\t\t\t\t\toptions=[default_value, *options],\n\t\t\t\t\tkey=lower_header,\n\t\t\t\t)",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\toptions",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\t\t\toptions = [*dropdown_options]\n\t\t\toptions.remove(default_value)\n\t\t\twith colums[index % column_count]:\n\t\t\t\tselectbox = st.selectbox(\n\t\t\t\t\tlabel=header,\n\t\t\t\t\tplaceholder=default_value,\n\t\t\t\t\toptions=[default_value, *options],\n\t\t\t\t\tkey=lower_header,\n\t\t\t\t)\n\t\t\t\theader_selection_list.append(selectbox)",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\tselectbox",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\t\t\t\tselectbox = st.selectbox(\n\t\t\t\t\tlabel=header,\n\t\t\t\t\tplaceholder=default_value,\n\t\t\t\t\toptions=[default_value, *options],\n\t\t\t\t\tkey=lower_header,\n\t\t\t\t)\n\t\t\t\theader_selection_list.append(selectbox)\n\t\tno_of_records = st.number_input(\"No. of records to Generate\", min_value=1)\n\t\tlocale_options = [locale.value for locale in Locale]\n\t\tdefault_locale_value = Locale.EN.value",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tno_of_records",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\t\tno_of_records = st.number_input(\"No. of records to Generate\", min_value=1)\n\t\tlocale_options = [locale.value for locale in Locale]\n\t\tdefault_locale_value = Locale.EN.value\n\t\tlocale_options.remove(default_locale_value)\n\t\tlocale = st.selectbox(\n\t\t\tlabel=\"Choose the Locale\",\n\t\t\toptions=[default_locale_value, *locale_options],\n\t\t)\n\t\tgenerate_records_btn = st.form_submit_button(\"Generate Records\")\n\tif generate_records_btn:",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tlocale_options",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\t\tlocale_options = [locale.value for locale in Locale]\n\t\tdefault_locale_value = Locale.EN.value\n\t\tlocale_options.remove(default_locale_value)\n\t\tlocale = st.selectbox(\n\t\t\tlabel=\"Choose the Locale\",\n\t\t\toptions=[default_locale_value, *locale_options],\n\t\t)\n\t\tgenerate_records_btn = st.form_submit_button(\"Generate Records\")\n\tif generate_records_btn:\n\t\tdf, csv_path = generate_csv(",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tdefault_locale_value",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\t\tdefault_locale_value = Locale.EN.value\n\t\tlocale_options.remove(default_locale_value)\n\t\tlocale = st.selectbox(\n\t\t\tlabel=\"Choose the Locale\",\n\t\t\toptions=[default_locale_value, *locale_options],\n\t\t)\n\t\tgenerate_records_btn = st.form_submit_button(\"Generate Records\")\n\tif generate_records_btn:\n\t\tdf, csv_path = generate_csv(\n\t\t\theader_selection_list,",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tlocale",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\t\tlocale = st.selectbox(\n\t\t\tlabel=\"Choose the Locale\",\n\t\t\toptions=[default_locale_value, *locale_options],\n\t\t)\n\t\tgenerate_records_btn = st.form_submit_button(\"Generate Records\")\n\tif generate_records_btn:\n\t\tdf, csv_path = generate_csv(\n\t\t\theader_selection_list,\n\t\t\tlocale,\n\t\t\tno_of_records,",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tgenerate_records_btn",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\t\tgenerate_records_btn = st.form_submit_button(\"Generate Records\")\n\tif generate_records_btn:\n\t\tdf, csv_path = generate_csv(\n\t\t\theader_selection_list,\n\t\t\tlocale,\n\t\t\tno_of_records,\n\t\t\theaders,\n\t\t\tfilename_with_extension,\n\t\t)\n\t\tst.dataframe(df)",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    }
+]
