@@ -592,7 +592,7 @@
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\tlocale_options = [locale.value for locale in Locale]\n\t\tdefault_locale_value = Locale.EN.value\n\t\tlocale_options.remove(default_locale_value)\n\t\tlocale = st.selectbox(\n\t\t\tlabel=\"Choose the Locale\",\n\t\t\toptions=[default_locale_value, *locale_options],\n\t\t)\n\t\tgenerate_records_btn = st.form_submit_button(\"Generate Records\")\n\tif generate_records_btn:\n\t\tdf, csv_path = generate_csv(",
+        "peekOfCode": "\t\tlocale_options = [locale.value for locale in Locale]\n\t\tdefault_locale_value = Locale.EN.value\n\t\tlocale_options.remove(default_locale_value)\n\t\tlocale = st.selectbox(\n\t\t\tlabel=\"Choose the Locale\",\n\t\t\toptions=[default_locale_value, *locale_options],\n\t\t)\n\t\tgenerate_records_btn = st.form_submit_button(\"Generate Records\")\n\tif generate_records_btn:\n\t\t# df, csv_path = generate_csv(",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
@@ -601,7 +601,7 @@
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\tdefault_locale_value = Locale.EN.value\n\t\tlocale_options.remove(default_locale_value)\n\t\tlocale = st.selectbox(\n\t\t\tlabel=\"Choose the Locale\",\n\t\t\toptions=[default_locale_value, *locale_options],\n\t\t)\n\t\tgenerate_records_btn = st.form_submit_button(\"Generate Records\")\n\tif generate_records_btn:\n\t\tdf, csv_path = generate_csv(\n\t\t\theader_selection_list,",
+        "peekOfCode": "\t\tdefault_locale_value = Locale.EN.value\n\t\tlocale_options.remove(default_locale_value)\n\t\tlocale = st.selectbox(\n\t\t\tlabel=\"Choose the Locale\",\n\t\t\toptions=[default_locale_value, *locale_options],\n\t\t)\n\t\tgenerate_records_btn = st.form_submit_button(\"Generate Records\")\n\tif generate_records_btn:\n\t\t# df, csv_path = generate_csv(\n\t\tdf = generate_csv(",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
@@ -610,7 +610,7 @@
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\tlocale = st.selectbox(\n\t\t\tlabel=\"Choose the Locale\",\n\t\t\toptions=[default_locale_value, *locale_options],\n\t\t)\n\t\tgenerate_records_btn = st.form_submit_button(\"Generate Records\")\n\tif generate_records_btn:\n\t\tdf, csv_path = generate_csv(\n\t\t\theader_selection_list,\n\t\t\tlocale,\n\t\t\tno_of_records,",
+        "peekOfCode": "\t\tlocale = st.selectbox(\n\t\t\tlabel=\"Choose the Locale\",\n\t\t\toptions=[default_locale_value, *locale_options],\n\t\t)\n\t\tgenerate_records_btn = st.form_submit_button(\"Generate Records\")\n\tif generate_records_btn:\n\t\t# df, csv_path = generate_csv(\n\t\tdf = generate_csv(\n\t\t\theader_selection_list,\n\t\t\tlocale,",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     },
@@ -619,7 +619,16 @@
         "kind": 5,
         "importPath": "streamlit_csv_seeder.main",
         "description": "streamlit_csv_seeder.main",
-        "peekOfCode": "\t\tgenerate_records_btn = st.form_submit_button(\"Generate Records\")\n\tif generate_records_btn:\n\t\tdf, csv_path = generate_csv(\n\t\t\theader_selection_list,\n\t\t\tlocale,\n\t\t\tno_of_records,\n\t\t\theaders,\n\t\t\tfilename_with_extension,\n\t\t)\n\t\tst.dataframe(df)",
+        "peekOfCode": "\t\tgenerate_records_btn = st.form_submit_button(\"Generate Records\")\n\tif generate_records_btn:\n\t\t# df, csv_path = generate_csv(\n\t\tdf = generate_csv(\n\t\t\theader_selection_list,\n\t\t\tlocale,\n\t\t\tno_of_records,\n\t\t\theaders,\n\t\t\tfilename_with_extension,\n\t\t)",
+        "detail": "streamlit_csv_seeder.main",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tdf",
+        "kind": 5,
+        "importPath": "streamlit_csv_seeder.main",
+        "description": "streamlit_csv_seeder.main",
+        "peekOfCode": "\t\tdf = generate_csv(\n\t\t\theader_selection_list,\n\t\t\tlocale,\n\t\t\tno_of_records,\n\t\t\theaders,\n\t\t\tfilename_with_extension,\n\t\t)\n\t\tst.dataframe(df)",
         "detail": "streamlit_csv_seeder.main",
         "documentation": {}
     }

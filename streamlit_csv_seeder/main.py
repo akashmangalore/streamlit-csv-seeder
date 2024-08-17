@@ -145,7 +145,8 @@ if uploaded_csv_file is not None:
 		)
 		generate_records_btn = st.form_submit_button("Generate Records")
 	if generate_records_btn:
-		df, csv_path = generate_csv(
+		# df, csv_path = generate_csv(
+		df = generate_csv(
 			header_selection_list,
 			locale,
 			no_of_records,
